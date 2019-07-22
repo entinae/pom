@@ -544,7 +544,7 @@
         <plugin>
           <groupId>org.safris.maven</groupId>
           <artifactId>javadocio-maven-plugin</artifactId>
-          <version>0.1.1</version>
+          <version>0.1.2-SNAPSHOT</version>
           <configuration>
             <sourceFileExcludes>
               <sourceFileExclude>**/*_*_*/*.java</sourceFileExclude> <!-- Exclude JAX-B sources -->
@@ -595,7 +595,7 @@
         <plugin>
           <groupId>org.safris.maven</groupId>
           <artifactId>coverallsio-maven-plugin</artifactId>
-          <version>4.3.0</version>
+          <version>4.3.0-1-SNAPSHOT</version>
         </plugin>
         <plugin>
           <groupId>org.openjax.jaxb</groupId>
