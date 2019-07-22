@@ -21,7 +21,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.safris.maven</groupId>
   <artifactId>rootpom</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5-SNAPSHOT</version>
   <packaging>pom</packaging>
   <url>https://github.com/safrisorg/rootpom</url>
   <name>Root POM</name>
@@ -600,7 +600,7 @@
         <plugin>
           <groupId>org.openjax.jaxb</groupId>
           <artifactId>jaxb-maven-plugin</artifactId>
-          <version>0.8.2</version>
+          <version>0.8.5-SNAPSHOT</version>
           <executions>
             <execution>
               <phase>generate-sources</phase>
@@ -613,7 +613,7 @@
         <plugin>
           <groupId>org.openjax.xml</groupId>
           <artifactId>xml-maven-plugin</artifactId>
-          <version>0.9.3</version>
+          <version>0.9.4-SNAPSHOT</version>
           <executions>
             <execution>
               <id>compile</id>
