@@ -575,6 +575,7 @@
             </includes>
             <excludes>
               <exclude></exclude> <!-- This is necessary for inner classes to be run -->
+              <exclude>**/*ITest</exclude>
               <exclude>**/*IntegrationTest</exclude>
               <exclude>**/*IntegrationTestCase</exclude>
               <exclude>**/*RTest</exclude>
