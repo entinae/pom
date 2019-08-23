@@ -568,6 +568,7 @@
           <version>2.22.1</version>
           <configuration>
             <trimStackTrace>false</trimStackTrace>
+            <runOrder>alphabetical</runOrder>
             <includes>
               <include>**/*Test</include>
               <include>**/*TestCase</include>
