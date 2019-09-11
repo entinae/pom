@@ -59,6 +59,65 @@
   </properties>
   <profiles>
     <profile>
+      <id>itestCompile</id>
+      <activation>
+        <property>
+          <name>!ZqMEGUbGeRJsDFjS86gYPg2Y</name>
+        </property>
+      </activation>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <version>3.8.0</version>
+              <configuration>
+                <source>${maven.compiler.source}</source>
+                <target>${maven.compiler.target}</target>
+              </configuration>
+              <executions>
+                <execution>
+                  <id>default-testCompile</id>
+                  <phase>test-compile</phase>
+                  <goals>
+                    <goal>testCompile</goal>
+                  </goals>
+                  <configuration>
+                    <testExcludes>
+                      <exclude>**/*ITest.java</exclude>
+                      <exclude>**/*IntegrationTest.java</exclude>
+                      <exclude>**/*IntegrationTestCase.java</exclude>
+                      <exclude>**/*RTest.java</exclude>
+                      <exclude>**/*RegressionTest.java</exclude>
+                      <exclude>**/*RegressionTestCase.java</exclude>
+                    </testExcludes>
+                  </configuration>
+                </execution>
+                <execution>
+                  <id>default-itestCompile</id>
+                  <phase>pre-integration-test</phase>
+                  <goals>
+                    <goal>testCompile</goal>
+                  </goals>
+                  <configuration>
+                    <testIncludes>
+                      <include>**/*ITest.java</include>
+                      <include>**/*IntegrationTest.java</include>
+                      <include>**/*IntegrationTestCase.java</include>
+                      <include>**/*RTest.java</include>
+                      <include>**/*RegressionTest.java</include>
+                      <include>**/*RegressionTestCase.java</include>
+                    </testIncludes>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+    <profile>
       <id>tools.jar</id>
       <activation>
         <jdk>(,1.8]</jdk>
@@ -514,51 +573,6 @@
     </plugins>
     <pluginManagement>
       <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.0</version>
-          <configuration>
-            <source>${maven.compiler.source}</source>
-            <target>${maven.compiler.target}</target>
-          </configuration>
-          <executions>
-            <execution>
-              <id>default-testCompile</id>
-              <phase>test-compile</phase>
-              <goals>
-                <goal>testCompile</goal>
-              </goals>
-              <configuration>
-                <testExcludes>
-                  <exclude>**/*ITest.java</exclude>
-                  <exclude>**/*IntegrationTest.java</exclude>
-                  <exclude>**/*IntegrationTestCase.java</exclude>
-                  <exclude>**/*RTest.java</exclude>
-                  <exclude>**/*RegressionTest.java</exclude>
-                  <exclude>**/*RegressionTestCase.java</exclude>
-                </testExcludes>
-              </configuration>
-            </execution>
-            <execution>
-              <id>default-itestCompile</id>
-              <phase>pre-integration-test</phase>
-              <goals>
-                <goal>testCompile</goal>
-              </goals>
-              <configuration>
-                <testIncludes>
-                  <include>**/*ITest.java</include>
-                  <include>**/*IntegrationTest.java</include>
-                  <include>**/*IntegrationTestCase.java</include>
-                  <include>**/*RTest.java</include>
-                  <include>**/*RegressionTest.java</include>
-                  <include>**/*RegressionTestCase.java</include>
-                </testIncludes>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
