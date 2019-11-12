@@ -199,6 +199,7 @@
                   <goal>run</goal>
                 </goals>
                 <configuration>
+                  <skipInvocation>${skipTests}</skipInvocation>
                   <pom>pom.xml</pom>
                   <noLog>true</noLog>
                   <streamLogs>true</streamLogs>
