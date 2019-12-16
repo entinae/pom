@@ -325,6 +325,7 @@
               </execution>
             </executions>
             <configuration>
+              <detectGeneratedSourcePaths>true</detectGeneratedSourcePaths>
               <timestampFormat>EpochMillis</timestampFormat>
               <skip>${skipTests}</skip> <!-- there is actually no "skip" parameter! -->
             </configuration>
