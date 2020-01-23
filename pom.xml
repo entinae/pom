@@ -56,6 +56,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <jmh.version>1.22</jmh.version>
   </properties>
   <profiles>
     <profile>
@@ -84,6 +85,13 @@
                     <goal>testCompile</goal>
                   </goals>
                   <configuration>
+                    <annotationProcessorPaths>
+                      <path>
+                        <groupId>org.openjdk.jmh</groupId>
+                        <artifactId>jmh-generator-annprocess</artifactId>
+                        <version>${jmh.version}</version>
+                      </path>
+                    </annotationProcessorPaths>
                     <testExcludes>
                       <exclude>**/*ITest.java</exclude>
                       <exclude>**/*IntegrationTest.java</exclude>
@@ -101,6 +109,13 @@
                     <goal>testCompile</goal>
                   </goals>
                   <configuration>
+                    <annotationProcessorPaths>
+                      <path>
+                        <groupId>org.openjdk.jmh</groupId>
+                        <artifactId>jmh-generator-annprocess</artifactId>
+                        <version>${jmh.version}</version>
+                      </path>
+                    </annotationProcessorPaths>
                     <testIncludes>
                       <include>**/*ITest.java</include>
                       <include>**/*IntegrationTest.java</include>
@@ -120,7 +135,7 @@
     <profile>
       <id>tools.jar</id>
       <activation>
-        <jdk>(,1.8]</jdk>
+        <jdk>(,9)</jdk>
       </activation>
       <dependencyManagement>
         <dependencies>
@@ -133,6 +148,26 @@
           </dependency>
         </dependencies>
       </dependencyManagement>
+    </profile>
+    <profile>
+      <id>jmh</id>
+      <activation>
+        <jdk>(,12)</jdk>
+      </activation>
+      <dependencies>
+        <dependency>
+          <groupId>org.openjdk.jmh</groupId>
+          <artifactId>jmh-core</artifactId>
+          <version>${jmh.version}</version>
+          <scope>test</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.openjdk.jmh</groupId>
+          <artifactId>jmh-generator-annprocess</artifactId>
+          <version>${jmh.version}</version>
+          <scope>test</scope>
+        </dependency>
+      </dependencies>
     </profile>
     <profile>
       <id>maven.test.skip</id>
