@@ -23,9 +23,9 @@ script:
 - 'if [ "$TRAVIS_BRANCH" = "master" ] &&
       [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
     eval "$SIGNING_KEY" &> /dev/null &&
-    mvn -e -s settings.xml deploy -P deploy;
+    mvn -e -B -s settings.xml deploy -P deploy;
   else
-    mvn -e -s settings.xml install;
+    mvn -e -B -s settings.xml install;
   fi'
 cache:
   directories:
