@@ -1,6 +1,10 @@
 # Changes by Version
 
-## v1.0.4 (2019-07-21)
+## [v1.0.5](https://github.com/openjax/root/compare/5983e42306d93274eb9549a00f978f86fed20b6b..HEAD) (2020-05-23)
+* Add `itestCompile` and `jmh` profiles.
+* Dowgrade `org.apache.maven.plugins:maven-resources-plugin` from `v3.1.0` to `v2.7` to resolve symlink issues.
+
+## [v1.0.4](https://github.com/openjax/root/compare/36514801954ffee27a56fdf9722cda0b4036db24..5983e42306d93274eb9549a00f978f86fed20b6b) (2019-07-21)
 * Fix `maven-invoker-plugin` pattern for plugin testing.
 * Switch from `org.eluder.coveralls:coveralls-maven-plugin` to `org.safris.maven:coverallsio-maven-plugin`.
 * Upgrade `org.safris.maven:javadocio-maven-plugin:0.1.0` to `0.1.1`.
