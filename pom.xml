@@ -21,7 +21,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.openjax</groupId>
   <artifactId>root</artifactId>
-  <version>1.0.5-SNAPSHOT</version>
+  <version>1.0.5</version>
   <packaging>pom</packaging>
   <url>https://github.com/openjax/root</url>
   <name>Root POM</name>
@@ -632,7 +632,7 @@
         <plugin>
           <groupId>org.safris.maven</groupId>
           <artifactId>javadocio-maven-plugin</artifactId>
-          <version>0.1.2-SNAPSHOT</version>
+          <version>0.1.2</version>
           <configuration>
             <sourceFileExcludes>
               <sourceFileExclude>**/*_*_*/*.java</sourceFileExclude> <!-- Exclude JAX-B sources -->
@@ -685,12 +685,12 @@
         <plugin>
           <groupId>org.safris.maven</groupId>
           <artifactId>coverallsio-maven-plugin</artifactId>
-          <version>4.3.0-1-SNAPSHOT</version>
+          <version>4.3.0-1</version>
         </plugin>
         <plugin>
           <groupId>org.openjax.jaxb</groupId>
           <artifactId>jaxb-maven-plugin</artifactId>
-          <version>0.8.5-SNAPSHOT</version>
+          <version>0.8.5</version>
           <executions>
             <execution>
               <phase>generate-sources</phase>
@@ -703,7 +703,7 @@
         <plugin>
           <groupId>org.openjax.xml</groupId>
           <artifactId>xml-maven-plugin</artifactId>
-          <version>0.9.4-SNAPSHOT</version>
+          <version>0.9.4</version>
           <executions>
             <execution>
               <id>compile</id>
