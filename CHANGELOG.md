@@ -2,6 +2,7 @@
 
 ## [v1.0.5](https://github.com/openjax/root/compare/5983e42306d93274eb9549a00f978f86fed20b6b..HEAD) (2020-05-23)
 * Add `itestCompile` and `jmh` profiles.
+* Add default `retryFailedDeploymentCount=3` to `maven-deploy-plugin` configuration.
 * Dowgrade `org.apache.maven.plugins:maven-resources-plugin` from `v3.1.0` to `v2.7` to resolve symlink issues.
 
 ## [v1.0.4](https://github.com/openjax/root/compare/36514801954ffee27a56fdf9722cda0b4036db24..5983e42306d93274eb9549a00f978f86fed20b6b) (2019-07-21)

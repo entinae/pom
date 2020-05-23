@@ -502,6 +502,7 @@
             <version>2.8.2</version>
             <configuration>
               <deployAtEnd>true</deployAtEnd>
+              <retryFailedDeploymentCount>3</retryFailedDeploymentCount>
             </configuration>
           </plugin>
           <plugin>
