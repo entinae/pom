@@ -690,7 +690,7 @@
         <plugin>
           <groupId>org.openjax.jaxb</groupId>
           <artifactId>jaxb-maven-plugin</artifactId>
-          <version>0.8.5</version>
+          <version>0.8.7-SNAPSHOT</version>
           <executions>
             <execution>
               <phase>generate-sources</phase>
@@ -703,7 +703,7 @@
         <plugin>
           <groupId>org.openjax.xml</groupId>
           <artifactId>xml-maven-plugin</artifactId>
-          <version>0.9.4</version>
+          <version>0.9.5-SNAPSHOT</version>
           <executions>
             <execution>
               <id>compile</id>
