@@ -213,6 +213,12 @@
                   <skipITs>${maven.test.skip}</skipITs>
                 </configuration>
               </execution>
+            <execution>
+                <id>integration-test-category</id>
+                <configuration>
+                  <skipITs>${maven.test.skip}</skipITs>
+                </configuration>
+              </execution>
             </executions>
           </plugin>
         </plugins>
@@ -234,6 +240,12 @@
               <executions>
                 <execution>
                   <id>regression-test</id>
+                  <configuration>
+                    <skipITs>${skipITests}</skipITs>
+                  </configuration>
+                </execution>
+              <execution>
+                  <id>regression-test-category</id>
                   <configuration>
                     <skipITs>${skipITests}</skipITs>
                   </configuration>
@@ -525,10 +537,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
-        <configuration>
-          <skipITs>true</skipITs>
-          <trimStackTrace>false</trimStackTrace>
-        </configuration>
         <executions>
           <execution>
             <id>integration-test</id>
@@ -546,9 +554,29 @@
               <excludes>
                 <exclude></exclude> <!-- This is necessary for inner classes to be run -->
               </excludes>
+              <groups>org.libj.test.IntegrationTest</groups>
+              <excludedGroups>org.libj.test.RegressionTest</excludedGroups>
             </configuration>
           </execution>
           <execution>
+            <id>integration-test-category</id>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
+            <phase>integration-test</phase>
+            <configuration>
+              <includes>
+                <include>**/*Test</include>
+              </includes>
+              <excludes>
+                <exclude></exclude> <!-- This is necessary for inner classes to be run -->
+              </excludes>
+              <groups>org.libj.test.IntegrationTest</groups>
+              <excludedGroups>org.libj.test.RegressionTest</excludedGroups>
+            </configuration>
+          </execution>
+        <execution>
             <id>regression-test</id>
             <goals>
               <goal>integration-test</goal>
@@ -564,10 +592,29 @@
               <excludes>
                 <exclude></exclude> <!-- This is necessary for inner classes to be run -->
               </excludes>
+              <groups>org.libj.test.RegressionTest</groups>
+              <excludedGroups>org.libj.test.IntegrationTest</excludedGroups>
+            </configuration>
+          </execution>
+          <execution>
+            <id>regression-test-category</id>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
+            <phase>verify</phase>
+            <configuration>
+              <includes>
+                <include>**/*Test</include>
+              </includes>
+              <excludes>
+                <exclude></exclude> <!-- This is necessary for inner classes to be run -->
+              </excludes>
+              <groups>org.libj.test.RegressionTest</groups>
             </configuration>
           </execution>
         </executions>
-      </plugin>
+        </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
@@ -670,12 +717,17 @@
               <exclude>**/*RegressionTest</exclude>
               <exclude>**/*RegressionTestCase</exclude>
             </excludes>
+          <excludedGroups>org.libj.test.IntegrationTest</excludedGroups>
+            <excludedGroups>org.libj.test.RegressionTest</excludedGroups>
           </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-failsafe-plugin</artifactId>
           <version>2.22.1</version>
+        <configuration>
+            <trimStackTrace>false</trimStackTrace>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.jacoco</groupId>
