@@ -257,6 +257,38 @@
       </build>
     </profile>
     <profile>
+      <id>skipRTests</id>
+      <activation>
+        <property>
+          <name>skipRTests</name>
+        </property>
+      </activation>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-failsafe-plugin</artifactId>
+              <executions>
+                <execution>
+                  <id>regression-test</id>
+                  <configuration>
+                    <skipITs>true</skipITs>
+                  </configuration>
+                </execution>
+                <execution>
+                  <id>regression-test-category</id>
+                  <configuration>
+                    <skipITs>true</skipITs>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+    <profile>
       <id>javadoc</id>
       <build>
         <plugins>
@@ -566,7 +598,7 @@
               <excludes>
                 <exclude></exclude> <!-- This is necessary for inner classes to be run -->
               </excludes>
-              <groups>org.libj.test.IntegrationTest</groups>
+              <excludedGroups>org.libj.test.IntegrationTest</excludedGroups>
               <excludedGroups>org.libj.test.RegressionTest</excludedGroups>
             </configuration>
           </execution>
@@ -604,7 +636,7 @@
               <excludes>
                 <exclude></exclude> <!-- This is necessary for inner classes to be run -->
               </excludes>
-              <groups>org.libj.test.RegressionTest</groups>
+              <excludedGroups>org.libj.test.RegressionTest</excludedGroups>
               <excludedGroups>org.libj.test.IntegrationTest</excludedGroups>
             </configuration>
           </execution>
