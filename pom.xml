@@ -334,6 +334,21 @@
                   <quiet>true</quiet>
                   <tags>
                     <tag>
+                      <name>apiNote</name>
+                      <placement>a</placement>
+                      <head>API Note:</head>
+                    </tag>
+                    <tag>
+                      <name>implSpec</name>
+                      <placement>a</placement>
+                      <head>Implementation Requirements:</head>
+                    </tag>
+                    <tag>
+                      <name>implNote</name>
+                      <placement>a</placement>
+                      <head>Implementation Note:</head>
+                    </tag>
+                    <tag>
                       <name>complexity</name>
                       <placement>a</placement>
                       <head>Complexity</head>
