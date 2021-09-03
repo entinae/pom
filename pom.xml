@@ -820,7 +820,7 @@
         <plugin>
           <groupId>org.safris.maven</groupId>
           <artifactId>coverallsio-maven-plugin</artifactId>
-          <version>4.3.0-1</version>
+          <version>4.3.0-2-SNAPSHOT</version>
         </plugin>
         <plugin>
           <groupId>org.openjax.jaxb</groupId>
