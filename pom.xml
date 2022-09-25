@@ -103,6 +103,13 @@
               <configuration>
                 <source>${maven.compiler.source}</source>
                 <target>${maven.compiler.target}</target>
+              <annotationProcessorPaths>
+                  <path>
+                    <groupId>org.openjdk.jmh</groupId>
+                    <artifactId>jmh-generator-annprocess</artifactId>
+                    <version>${jmh.version}</version>
+                  </path>
+                </annotationProcessorPaths>
               </configuration>
               <executions>
                 <execution>
@@ -112,13 +119,6 @@
                     <goal>testCompile</goal>
                   </goals>
                   <configuration>
-                    <annotationProcessorPaths>
-                      <path>
-                        <groupId>org.openjdk.jmh</groupId>
-                        <artifactId>jmh-generator-annprocess</artifactId>
-                        <version>${jmh.version}</version>
-                      </path>
-                    </annotationProcessorPaths>
                     <testExcludes>
                       <testExclude>**/*ITest.java</testExclude>
                       <testExclude>**/*IntegrationTest.java</testExclude>
@@ -136,13 +136,6 @@
                     <goal>testCompile</goal>
                   </goals>
                   <configuration>
-                    <annotationProcessorPaths>
-                      <path>
-                        <groupId>org.openjdk.jmh</groupId>
-                        <artifactId>jmh-generator-annprocess</artifactId>
-                        <version>${jmh.version}</version>
-                      </path>
-                    </annotationProcessorPaths>
                     <testIncludes>
                       <testInclude>**/*ITest.java</testInclude>
                       <testInclude>**/*IntegrationTest.java</testInclude>
@@ -220,36 +213,6 @@
         <skipITests>true</skipITests>
         <skipRTests>true</skipRTests>
       </properties>
-    </profile>
-    <profile>
-      <id>!skipITests</id>
-      <activation>
-        <property>
-          <name>!skipITests</name>
-        </property>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-failsafe-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>integration-test</id>
-                <configuration>
-                  <skipITs>${maven.test.skip}</skipITs>
-                </configuration>
-              </execution>
-              <execution>
-                <id>integration-test-category</id>
-                <configuration>
-                  <skipITs>${maven.test.skip}</skipITs>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
     </profile>
     <profile>
       <id>!skipRTests</id>
@@ -624,6 +587,7 @@
             </goals>
             <phase>integration-test</phase>
             <configuration>
+              <skipITs>${skipITests}</skipITs>
               <includes>
                 <include>**/*ITest</include>
                 <include>**/*IntegrationTest</include>
@@ -644,6 +608,7 @@
             </goals>
             <phase>integration-test</phase>
             <configuration>
+              <skipITs>${skipITests}</skipITs>
               <includes>
                 <include>**/*Test</include>
               </includes>
@@ -662,6 +627,7 @@
             </goals>
             <phase>verify</phase>
             <configuration>
+              <skipITs>${skipITests}</skipITs>
               <includes>
                 <include>**/*RTest</include>
                 <include>**/*RegressionTest</include>
@@ -682,6 +648,7 @@
             </goals>
             <phase>verify</phase>
             <configuration>
+              <skipITs>${skipITests}</skipITs>
               <includes>
                 <include>**/*Test</include>
               </includes>
