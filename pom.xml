@@ -99,7 +99,7 @@
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-compiler-plugin</artifactId>
-              <version>3.8.1</version>
+              <version>3.8.0</version> <!-- testInclude/testExclude is broken in 3.8.1  -->
               <configuration>
                 <source>${maven.compiler.source}</source>
                 <target>${maven.compiler.target}</target>
@@ -120,12 +120,12 @@
                       </path>
                     </annotationProcessorPaths>
                     <testExcludes>
-                      <exclude>**/*ITest.java</exclude>
-                      <exclude>**/*IntegrationTest.java</exclude>
-                      <exclude>**/*IntegrationTestCase.java</exclude>
-                      <exclude>**/*RTest.java</exclude>
-                      <exclude>**/*RegressionTest.java</exclude>
-                      <exclude>**/*RegressionTestCase.java</exclude>
+                      <testExclude>**/*ITest.java</testExclude>
+                      <testExclude>**/*IntegrationTest.java</testExclude>
+                      <testExclude>**/*IntegrationTestCase.java</testExclude>
+                      <testExclude>**/*RTest.java</testExclude>
+                      <testExclude>**/*RegressionTest.java</testExclude>
+                      <testExclude>**/*RegressionTestCase.java</testExclude>
                     </testExcludes>
                   </configuration>
                 </execution>
@@ -144,12 +144,12 @@
                       </path>
                     </annotationProcessorPaths>
                     <testIncludes>
-                      <include>**/*ITest.java</include>
-                      <include>**/*IntegrationTest.java</include>
-                      <include>**/*IntegrationTestCase.java</include>
-                      <include>**/*RTest.java</include>
-                      <include>**/*RegressionTest.java</include>
-                      <include>**/*RegressionTestCase.java</include>
+                      <testInclude>**/*ITest.java</testInclude>
+                      <testInclude>**/*IntegrationTest.java</testInclude>
+                      <testInclude>**/*IntegrationTestCase.java</testInclude>
+                      <testInclude>**/*RTest.java</testInclude>
+                      <testInclude>**/*RegressionTest.java</testInclude>
+                      <testInclude>**/*RegressionTestCase.java</testInclude>
                     </testIncludes>
                   </configuration>
                 </execution>
