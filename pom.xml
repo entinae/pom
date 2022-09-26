@@ -222,28 +222,26 @@
         </property>
       </activation>
       <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-failsafe-plugin</artifactId>
-              <executions>
-                <execution>
-                  <id>regression-test</id>
-                  <configuration>
-                    <skipITs>${skipITests}</skipITs>
-                  </configuration>
-                </execution>
-                <execution>
-                  <id>regression-test-category</id>
-                  <configuration>
-                    <skipITs>${skipITests}</skipITs>
-                  </configuration>
-                </execution>
-              </executions>
-            </plugin>
-          </plugins>
-        </pluginManagement>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>regression-test</id>
+                <configuration>
+                  <skipITs>${skipITests}</skipITs>
+                </configuration>
+              </execution>
+              <execution>
+                <id>regression-test-category</id>
+                <configuration>
+                  <skipITs>${skipITests}</skipITs>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
       </build>
     </profile>
     <profile>
@@ -254,28 +252,26 @@
         </property>
       </activation>
       <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-failsafe-plugin</artifactId>
-              <executions>
-                <execution>
-                  <id>regression-test</id>
-                  <configuration>
-                    <skipITs>true</skipITs>
-                  </configuration>
-                </execution>
-                <execution>
-                  <id>regression-test-category</id>
-                  <configuration>
-                    <skipITs>true</skipITs>
-                  </configuration>
-                </execution>
-              </executions>
-            </plugin>
-          </plugins>
-        </pluginManagement>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>regression-test</id>
+                <configuration>
+                  <skipITs>true</skipITs>
+                </configuration>
+              </execution>
+              <execution>
+                <id>regression-test-category</id>
+                <configuration>
+                  <skipITs>true</skipITs>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
       </build>
     </profile>
     <profile>
