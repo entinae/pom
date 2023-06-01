@@ -1,5 +1,5 @@
 <!--
-  Copyright (c) 2019 OpenJAX
+  Copyright (c) 2019 ENTINAE
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -19,23 +19,23 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.openjax</groupId>
-  <artifactId>root</artifactId>
+  <groupId>org.entinae</groupId>
+  <artifactId>pom</artifactId>
   <version>1.0.6-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <url>https://github.com/openjax/root</url>
+  <url>https://github.com/entinae/pom</url>
   <name>Root POM</name>
   <description>
     Root POM offering sonatype deployment, integration and regression test phases, and reporting.
   </description>
   <organization>
-    <name>OpenJAX</name>
-    <url>https://www.openjax.org/</url>
+    <name>ENTINAE</name>
+    <url>https://www.entinae.org/</url>
   </organization>
   <scm>
-    <url>https://github.com/openjax/root</url>
-    <connection>scm:git:https://github.com/openjax/root.git</connection>
-    <developerConnection>scm:git:https://github.com/openjax/root.git</developerConnection>
+    <url>https://github.com/entinae/pom</url>
+    <connection>scm:git:https://github.com/entinae/pom.git</connection>
+    <developerConnection>scm:git:https://github.com/entinae/pom.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
   <licenses>
