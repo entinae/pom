@@ -56,7 +56,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <jmh.version>1.36</jmh.version>
+    <jmh.version>1.37</jmh.version>
   </properties>
   <profiles>
     <profile>
@@ -744,9 +744,9 @@
           </configuration>
         </plugin>
         <plugin>
-          <groupId>org.safris.maven</groupId>
+          <groupId>org.entinae</groupId>
           <artifactId>javadocio-maven-plugin</artifactId>
-          <version>0.1.3-SNAPSHOT</version>
+          <version>0.1.3</version>
           <configuration>
             <sourceFileExcludes>
               <sourceFileExclude>**/*_*_*/*.java</sourceFileExclude> <!-- Exclude JAX-B sources -->
@@ -767,7 +767,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.2</version>
+          <version>3.1.2</version>
           <configuration>
             <trimStackTrace>false</trimStackTrace>
             <runOrder>alphabetical</runOrder>
@@ -791,7 +791,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-failsafe-plugin</artifactId>
-          <version>2.22.2</version>
+          <version>3.1.2</version>
           <configuration>
             <trimStackTrace>false</trimStackTrace>
           </configuration>
@@ -802,9 +802,9 @@
           <version>0.8.10</version>
         </plugin>
         <plugin>
-          <groupId>org.safris.maven</groupId>
+          <groupId>org.entinae</groupId>
           <artifactId>coverallsio-maven-plugin</artifactId>
-          <version>4.3.0-2-SNAPSHOT</version>
+          <version>4.3.0-2</version>
         </plugin>
         <plugin>
           <groupId>org.openjax.jaxb</groupId>
@@ -896,7 +896,7 @@
       <dependency>
         <groupId>org.mockito</groupId>
         <artifactId>mockito-core</artifactId>
-        <version>4.8.1</version>
+        <version>4.11.0</version> <!-- All versions of v5+ don't run for jdk8 -->
       </dependency>
     </dependencies>
   </dependencyManagement>
