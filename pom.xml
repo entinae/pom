@@ -438,6 +438,7 @@
               </execution>
             </executions>
             <configuration>
+              <repoToken>${coverallsRepoToken}</repoToken>
               <detectGeneratedSourcePaths>true</detectGeneratedSourcePaths>
               <timestampFormat>EpochMillis</timestampFormat>
               <skip>${skipTests}</skip> <!-- there is actually no "skip" parameter! -->
