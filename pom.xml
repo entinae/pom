@@ -21,7 +21,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.entinae</groupId>
   <artifactId>pom</artifactId>
-  <version>1.0.6-SNAPSHOT</version>
+  <version>1.0.6</version>
   <packaging>pom</packaging>
   <url>https://github.com/entinae/pom</url>
   <name>Root POM</name>
@@ -810,7 +810,7 @@
         <plugin>
           <groupId>org.openjax.jaxb</groupId>
           <artifactId>jaxb-maven-plugin</artifactId>
-          <version>0.8.7-SNAPSHOT</version>
+          <version>0.8.7</version>
           <executions>
             <execution>
               <phase>generate-sources</phase>
@@ -823,7 +823,7 @@
         <plugin>
           <groupId>org.openjax.xml</groupId>
           <artifactId>xml-maven-plugin</artifactId>
-          <version>0.9.5-SNAPSHOT</version>
+          <version>0.9.5</version>
           <executions>
             <execution>
               <id>compile</id>
