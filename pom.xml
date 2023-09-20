@@ -21,7 +21,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.entinae</groupId>
   <artifactId>pom</artifactId>
-  <version>1.0.7</version>
+  <version>1.0.8-SNAPSHOT</version>
   <packaging>pom</packaging>
   <url>https://github.com/entinae/pom</url>
   <name>Root POM</name>
@@ -560,7 +560,7 @@
             <artifactId>maven-gpg-plugin</artifactId>
             <executions>
               <execution>
-                <phase>verify</phase>
+                <phase>deploy</phase>
                 <goals>
                   <goal>sign</goal>
                 </goals>
@@ -572,8 +572,7 @@
             <artifactId>maven-deploy-plugin</artifactId>
             <version>3.1.1</version>
             <configuration>
-              <deployAtEnd>true</deployAtEnd>
-              <retryFailedDeploymentCount>3</retryFailedDeploymentCount>
+              <retryFailedDeploymentCount>10</retryFailedDeploymentCount>
             </configuration>
           </plugin>
           <plugin>
@@ -724,7 +723,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-gpg-plugin</artifactId>
-          <version>3.0.1</version>
+          <version>3.1.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
