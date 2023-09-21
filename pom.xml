@@ -746,7 +746,7 @@
         <plugin>
           <groupId>org.entinae</groupId>
           <artifactId>javadocio-maven-plugin</artifactId>
-          <version>0.1.3</version>
+          <version>0.1.4-SNAPSHOT</version>
           <configuration>
             <sourceFileExcludes>
               <sourceFileExclude>**/*_*_*/*.java</sourceFileExclude> <!-- Exclude JAX-B sources -->
@@ -804,12 +804,12 @@
         <plugin>
           <groupId>org.entinae</groupId>
           <artifactId>coverallsio-maven-plugin</artifactId>
-          <version>4.3.0-2</version>
+          <version>4.3.0-3-SNAPSHOT</version>
         </plugin>
         <plugin>
           <groupId>org.openjax.jaxb</groupId>
           <artifactId>jaxb-maven-plugin</artifactId>
-          <version>0.8.7</version>
+          <version>0.8.8-SNAPSHOT</version>
           <executions>
             <execution>
               <phase>generate-sources</phase>
@@ -822,7 +822,7 @@
         <plugin>
           <groupId>org.openjax.xml</groupId>
           <artifactId>xml-maven-plugin</artifactId>
-          <version>0.9.5</version>
+          <version>1.0.0-SNAPSHOT</version>
           <executions>
             <execution>
               <id>compile</id>
