@@ -584,6 +584,7 @@
               <serverId>sonatype-staging</serverId>
               <nexusUrl>https://oss.sonatype.org/</nexusUrl>
               <autoReleaseAfterClose>true</autoReleaseAfterClose>
+              <deployAtEnd>true</deployAtEnd>
             </configuration>
           </plugin>
         </plugins>
