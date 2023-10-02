@@ -573,6 +573,7 @@
             <version>3.1.1</version>
             <configuration>
               <retryFailedDeploymentCount>10</retryFailedDeploymentCount>
+              <deployAtEnd>true</deployAtEnd>
             </configuration>
           </plugin>
           <plugin>
@@ -584,7 +585,6 @@
               <serverId>sonatype-staging</serverId>
               <nexusUrl>https://oss.sonatype.org/</nexusUrl>
               <autoReleaseAfterClose>true</autoReleaseAfterClose>
-              <deployAtEnd>true</deployAtEnd>
             </configuration>
           </plugin>
         </plugins>
