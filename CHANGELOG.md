@@ -1,6 +1,11 @@
 # Changes by Version
 
-## [v1.0.8-SNAPSHOT](https://github.com/libj/util/compare/148df69c7a8c39d066b7fd0d9488375667365858..HEAD)
+## [v1.0.9-SNAPSHOT](https://github.com/libj/util/compare/468a9270dc9eff676f77d9f810a650b0fda457ba..HEAD)
+
+## [v1.0.8](https://github.com/libj/util/compare/148df69c7a8c39d066b7fd0d9488375667365858..468a9270dc9eff676f77d9f810a650b0fda457ba) (2024-02-27)
+* #16 Remove `<dependencies>` and `<dependencyManagement>`
+* #13 Turn on deployAtEnd for maven-deploy-plugin
+* #12 Upgrade maven-gpg-plugin to 3.1.0
 
 ## [v1.0.7](https://github.com/entinae/pom/compare/495be106d1a76e344665dc715c47f4b102230fc9..148df69c7a8c39d066b7fd0d9488375667365858) (2023-09-18)
 * Upgrade `org.apache.maven.plugins:maven-deploy-plugin:3.0.0` to `3.1.1`.
